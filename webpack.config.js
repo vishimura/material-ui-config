@@ -9,11 +9,13 @@ module.exports = {
     entry: './src/index.jsx',
     output: {
         filename: './app.js',
-        path: __dirname + '/public'
+        path: __dirname + '/public',
+        publicPath: '/'
     },
     devServer: {
         contentBase: "./public",
-        port: 9000
+        port: 9000,
+        historyApiFallback: true,
     },
     resolve:{
         extensions: ['*', '.js', '.jsx'],
@@ -55,6 +57,14 @@ module.exports = {
                 presets: ['@babel/preset-env', '@babel/preset-react'],
                 plugins: ['@babel/plugin-proposal-class-properties']
               }
+            }
+        },{
+            test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
+            use: {
+                loader: "file-loader",
+                options: {
+                  limit: 50000,
+                },
             }
         }]
     }
