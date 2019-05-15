@@ -1,13 +1,13 @@
 {
-  "name": "frontend",
+  "name": "cptec-inpe",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utilização da API do cptec-inpe para a previsão do tempo",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack"
   },
-  "author": "",
+  "author": "Vítor Shimura",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -31,5 +31,5 @@
     "webpack-cli": "3.2.3",
     "webpack-dev-server": "3.2.1"
   },
-  "repository": "https://github.com/vishimura/material-ui-config.git"
+  "repository": "https://github.com/vishimura/cptec-inpe.git"
 }
